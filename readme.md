@@ -1,4 +1,4 @@
-```markdown
+
 # Geo Decision Matrix: 重建地圖決策系統
 
 > 這是部落格系列文章 **[Map API Migration Trilogy]** 的實作專案。
@@ -37,7 +37,5 @@ python src/1_data_gen.py
 
 ```bash
 docker exec -it spark-master spark-submit /app/src/2_spark_etl.py
-
-```
 
 ```
