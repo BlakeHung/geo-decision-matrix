@@ -1,48 +1,68 @@
-import pandas as pd
-import numpy as np
+import csv
 import random
+import time
 import os
 
-# 確保 data 資料夾存在
-os.makedirs('data', exist_ok=True)
+# 設定輸出路徑
+OUTPUT_DIR = 'data'
+OUTPUT_FILE = os.path.join(OUTPUT_DIR, 'gps_tracks.csv')
 
-TOTAL_RECORDS = 1000000
-CITIES = ['Taipei', 'NewTaipei', 'Taichung', 'Kaohsiung', 'Changhua', 'Hualien']
+if not os.path.exists(OUTPUT_DIR):
+    os.makedirs(OUTPUT_DIR)
 
-# 模擬誤差設定: (城市, 發生誤差機率, 平均誤差公尺數)
-# 故事設定：都會區很準，但彰化巷弄與花蓮山區誤差大
-ERROR_PROFILES = {
-    'Taipei': (0.05, 10),
-    'NewTaipei': (0.05, 15),
-    'Taichung': (0.10, 20),
-    'Kaohsiung': (0.15, 25),
-    'Changhua': (0.35, 180),  # 35% 機率誤差 180m
-    'Hualien': (0.60, 550)    # 60% 機率誤差 550m
-}
-
-print(f"🚀 正在生成 {TOTAL_RECORDS} 筆模擬地圖數據...")
-
-data = []
-for i in range(TOTAL_RECORDS):
-    city = random.choice(CITIES)
-    # 基準點 (Google Maps)
-    base_lat, base_lng = 24.0 + random.random(), 121.0 + random.random()
+def generate_data():
+    print("正在製造「定向災難」數據中 (不依賴 Pandas)...")
     
-    # 對照點 (Map8)
-    prob, avg_error = ERROR_PROFILES[city]
-    
-    if random.random() < prob:
-        # 模擬偏差 (0.00001度 約 1公尺)
-        # 隨機產生一個偏差方向
-        offset = (avg_error / 111000) * random.uniform(0.5, 1.5)
-        map8_lat = base_lat + offset
-        map8_lng = base_lng + offset
-    else:
-        map8_lat, map8_lng = base_lat, base_lng
+    with open(OUTPUT_FILE, 'w', newline='', encoding='utf-8') as csvfile:
+        fieldnames = ['user_id', 'timestamp', 'latitude', 'longitude', 'city']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+
+        # ==========================================
+        # 劇本一：台北 (Taipei) - 正常數據
+        # ==========================================
+        base_lat_tp = 25.0780
+        base_lon_tp = 121.5750
+        current_time = int(time.time())
         
-    data.append([city, base_lat, base_lng, map8_lat, map8_lng])
+        for i in range(50):
+            base_lat_tp += random.uniform(-0.0001, 0.0001)
+            base_lon_tp += random.uniform(-0.0001, 0.0001)
+            writer.writerow({
+                'user_id': 'user_a_taipei',
+                'timestamp': current_time + i * 10,
+                'latitude': round(base_lat_tp, 6),
+                'longitude': round(base_lon_tp, 6),
+                'city': 'Taipei'
+            })
 
-df = pd.DataFrame(data, columns=['city', 'g_lat', 'g_lng', 'm_lat', 'm_lng'])
-csv_path = 'data/raw_addresses.csv'
-df.to_csv(csv_path, index=False)
-print(f"✅ 模擬數據已生成：{csv_path} (Size: {os.path.getsize(csv_path)/1024/1024:.2f} MB)")
+        # ==========================================
+        # 劇本二：新竹 (Hsinchu) - 災難數據 (NaN 製造機)
+        # ==========================================
+        base_lat_hc = 24.8050
+        base_lon_hc = 120.9750
+        
+        for i in range(50):
+            # 關鍵點：製造完全重疊的座標，引發距離計算的分母為 0 或 acos 錯誤
+            if 10 < i < 20: 
+                pass # 經緯度完全不變
+            elif i == 30:
+                base_lat_hc += 0.5 # 瞬間移動
+            elif i == 31:
+                base_lat_hc -= 0.5
+            else:
+                base_lat_hc += random.uniform(-0.0002, 0.0002)
+                base_lon_hc += random.uniform(-0.0002, 0.0002)
+
+            writer.writerow({
+                'user_id': 'user_c_hsinchu',
+                'timestamp': current_time + i * 10,
+                'latitude': round(base_lat_hc, 6),
+                'longitude': round(base_lon_hc, 6),
+                'city': 'Hsinchu'
+            })
+
+    print(f"數據生成完畢！請檢查: {OUTPUT_FILE}")
+
+if __name__ == '__main__':
+    generate_data()
