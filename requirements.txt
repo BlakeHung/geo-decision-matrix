@@ -1,0 +1,9 @@
+pandas
+numpy
+pyspark
+fastapi
+uvicorn
+langchain
+langchain-community
+langchain-core
+ollama
