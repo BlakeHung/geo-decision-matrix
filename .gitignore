@@ -1,13 +1,17 @@
-# Python
+# --- Python ---
 __pycache__/
 *.py[cod]
 venv/
-.env
 
-# Spark / Data (千萬別推這些)
-data/
-spark-warehouse/
-.ipynb_checkpoints/
+# --- Data (不上传大檔案) ---
+data/*.csv
+data/*.json
+data/*.html
+!data/example_input.csv  # (選用) 如果你想留一個範例檔給別人看，可以用 ! 排除
 
-# Docker
-.docker_data/
+# --- Spark / Java ---
+derby.log
+metastore_db/
+
+# --- OS ---
+.DS_Store
