@@ -3,6 +3,7 @@ from pyspark.sql.window import Window
 from pyspark.sql import functions as F
 from pyspark.sql.types import DoubleType
 import math
+import time  # <--- 新增這個
 
 # --- 核心邏輯：Haversine 公式 ---
 def calculate_haversine(lat1, lon1, lat2, lon2):
@@ -14,7 +15,7 @@ def calculate_haversine(lat1, lon1, lat2, lon2):
     a = math.sin(dlat/2) * math.sin(dlat/2) + \
         math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) * \
         math.sin(dlon/2) * math.sin(dlon/2)
-    a = min(1.0, max(0.0, a)) # 防禦 NaN
+    a = min(1.0, max(0.0, a))
     c = 2 * math.atan2(math.sqrt(a), math.sqrt(1-a))
     return R * c
 
@@ -23,7 +24,6 @@ def main():
     spark.sparkContext.setLogLevel("ERROR")
 
     print(">>> [ETL] 讀取並前處理數據...")
-    # 注意：這裡使用相對路徑，搭配 Docker 的 -w 參數
     df = spark.read.csv("data/gps_tracks.csv", header=True, inferSchema=True)
 
     # 1. 計算每一步的距離
@@ -61,18 +61,21 @@ def main():
                                      .withColumn("final_score", F.round("final_score", 2))
 
     print("\n========= 城市運營決策矩陣 (Decision Matrix) =========")
-    # [關鍵點] 這行必須縮排在 main() 裡面
     decision_matrix.orderBy(F.desc("final_score")).show(truncate=False)
 
     # --- 匯出結果為 JSON ---
     print(">>> [Export] 正在匯出結果為 JSON...")
     output_file = "data/decision_result.json"
-    
-    # [關鍵點] 這裡也必須在 main() 裡面
     pandas_df = decision_matrix.orderBy(F.desc("final_score")).toPandas()
     pandas_df.to_json(output_file, orient="records", force_ascii=False, indent=4)
-    
     print(f">>> 匯出完成！API 伺服器將讀取此檔案：{output_file}")
+
+    # ==========================================
+    # 這裡就是關鍵！讓程式暫停 300 秒 (5分鐘)
+    # ==========================================
+    print("\n>>> [UI MODE] 程式已暫停，請立刻打開瀏覽器：http://localhost:4040")
+    print(">>> (5 分鐘後將自動關閉...)")
+    time.sleep(300) 
 
     spark.stop()
 
