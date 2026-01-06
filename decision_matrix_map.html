@@ -1,0 +1,2401 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0348d1aae7de3979fa439f1194ad58eb {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_0348d1aae7de3979fa439f1194ad58eb" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_0348d1aae7de3979fa439f1194ad58eb = L.map(
+                "map_0348d1aae7de3979fa439f1194ad58eb",
+                {
+                    center: [25.033, 121.5654],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 12,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_321812e3bc0c84331ff7fa2c621292bc = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_321812e3bc0c84331ff7fa2c621292bc.addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+            var circle_marker_21f67f821c4c59e06c9c8b02c6e615e0 = L.circleMarker(
+                [25.071415514866676, 121.61439381339561],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_003b5d23448b4dc775a172ded0baf54a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7c7a8aec35dcc5afe5e8528955b582ed = $(`<div id="html_7c7a8aec35dcc5afe5e8528955b582ed" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_4817<br>             <b>Speed:</b> 31.3 km/h<br>             <b>Stuck:</b> 2 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_003b5d23448b4dc775a172ded0baf54a.setContent(html_7c7a8aec35dcc5afe5e8528955b582ed);
+            
+        
+
+        circle_marker_21f67f821c4c59e06c9c8b02c6e615e0.bindPopup(popup_003b5d23448b4dc775a172ded0baf54a)
+        ;
+
+        
+    
+    
+            var circle_marker_aaf359173047ee8e11739337e0e08a51 = L.circleMarker(
+                [25.04259020970583, 121.59550071283545],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_02c3d955cd40befa5b2ed9a52026ef31 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a4515d993938771cedf63acd83e06180 = $(`<div id="html_a4515d993938771cedf63acd83e06180" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_9970<br>             <b>Speed:</b> 46.5 km/h<br>             <b>Stuck:</b> 3 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_02c3d955cd40befa5b2ed9a52026ef31.setContent(html_a4515d993938771cedf63acd83e06180);
+            
+        
+
+        circle_marker_aaf359173047ee8e11739337e0e08a51.bindPopup(popup_02c3d955cd40befa5b2ed9a52026ef31)
+        ;
+
+        
+    
+    
+            var circle_marker_eff0dff4103992a9b83c9813a3153a2f = L.circleMarker(
+                [24.986669920503683, 121.58814058971969],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_c991817284d2974996a2f8bc9398a0bb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_483b59c1c97e933da25092fb664f123f = $(`<div id="html_483b59c1c97e933da25092fb664f123f" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_3536<br>             <b>Speed:</b> 23.7 km/h<br>             <b>Stuck:</b> 0 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_c991817284d2974996a2f8bc9398a0bb.setContent(html_483b59c1c97e933da25092fb664f123f);
+            
+        
+
+        circle_marker_eff0dff4103992a9b83c9813a3153a2f.bindPopup(popup_c991817284d2974996a2f8bc9398a0bb)
+        ;
+
+        
+    
+    
+            var circle_marker_911728fb3ef812f4f57ad7d56123c2a6 = L.circleMarker(
+                [25.007583292073384, 121.58395974348404],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_0b4b05da39ce10c6dff6d3a88662774e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fbb22965466aa476ced4e82be0ee1bc1 = $(`<div id="html_fbb22965466aa476ced4e82be0ee1bc1" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_9307<br>             <b>Speed:</b> 20.9 km/h<br>             <b>Stuck:</b> 6 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_0b4b05da39ce10c6dff6d3a88662774e.setContent(html_fbb22965466aa476ced4e82be0ee1bc1);
+            
+        
+
+        circle_marker_911728fb3ef812f4f57ad7d56123c2a6.bindPopup(popup_0b4b05da39ce10c6dff6d3a88662774e)
+        ;
+
+        
+    
+    
+            var circle_marker_2b4c4bea0648e7844185cf42b1a07478 = L.circleMarker(
+                [25.072096448879623, 121.51710295679696],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_888cff614a017619fb70921b356268ac = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_000c8fc4564aa247e2ad5e530c870371 = $(`<div id="html_000c8fc4564aa247e2ad5e530c870371" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_1508<br>             <b>Speed:</b> 40.7 km/h<br>             <b>Stuck:</b> 2 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_888cff614a017619fb70921b356268ac.setContent(html_000c8fc4564aa247e2ad5e530c870371);
+            
+        
+
+        circle_marker_2b4c4bea0648e7844185cf42b1a07478.bindPopup(popup_888cff614a017619fb70921b356268ac)
+        ;
+
+        
+    
+    
+            var circle_marker_bc132e1fef7feffc4b2c3970fd3e4d2d = L.circleMarker(
+                [24.987277385681733, 121.56746205517584],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_445639b6e2d1283f7a5113bcba54cc56 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_126ee70a94705c816ef3ca205d04f0e5 = $(`<div id="html_126ee70a94705c816ef3ca205d04f0e5" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_3900<br>             <b>Speed:</b> 52.9 km/h<br>             <b>Stuck:</b> 0 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_445639b6e2d1283f7a5113bcba54cc56.setContent(html_126ee70a94705c816ef3ca205d04f0e5);
+            
+        
+
+        circle_marker_bc132e1fef7feffc4b2c3970fd3e4d2d.bindPopup(popup_445639b6e2d1283f7a5113bcba54cc56)
+        ;
+
+        
+    
+    
+            var circle_marker_e2cd850cd995325a4d4fb2499a5e9c00 = L.circleMarker(
+                [25.038043231221014, 121.54331128917862],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_0979d44676a1ac97899851d0761fe5c0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2ec05f2cf70e56296f9209903f95056a = $(`<div id="html_2ec05f2cf70e56296f9209903f95056a" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_2013<br>             <b>Speed:</b> 27.2 km/h<br>             <b>Stuck:</b> 8 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_0979d44676a1ac97899851d0761fe5c0.setContent(html_2ec05f2cf70e56296f9209903f95056a);
+            
+        
+
+        circle_marker_e2cd850cd995325a4d4fb2499a5e9c00.bindPopup(popup_0979d44676a1ac97899851d0761fe5c0)
+        ;
+
+        
+    
+    
+            var circle_marker_eaa3c4a16e31b7502439ef05015f18e8 = L.circleMarker(
+                [25.036174200027517, 121.58516801547744],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_8e50e259ff028d3cc0bfebc0f534bb58 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bbec3e2496f13552c8094e23258ad3e6 = $(`<div id="html_bbec3e2496f13552c8094e23258ad3e6" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_5976<br>             <b>Speed:</b> 49.6 km/h<br>             <b>Stuck:</b> 8 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_8e50e259ff028d3cc0bfebc0f534bb58.setContent(html_bbec3e2496f13552c8094e23258ad3e6);
+            
+        
+
+        circle_marker_eaa3c4a16e31b7502439ef05015f18e8.bindPopup(popup_8e50e259ff028d3cc0bfebc0f534bb58)
+        ;
+
+        
+    
+    
+            var circle_marker_78ae8245e682b7c306aaf5f7b17b0035 = L.circleMarker(
+                [25.01737189571986, 121.5195246202108],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_61c5f91573acd4a31de9dfc94d4a4e5a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a997e92dffc3628b5ee3c9495e0e7026 = $(`<div id="html_a997e92dffc3628b5ee3c9495e0e7026" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_9733<br>             <b>Speed:</b> 50.3 km/h<br>             <b>Stuck:</b> 0 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_61c5f91573acd4a31de9dfc94d4a4e5a.setContent(html_a997e92dffc3628b5ee3c9495e0e7026);
+            
+        
+
+        circle_marker_78ae8245e682b7c306aaf5f7b17b0035.bindPopup(popup_61c5f91573acd4a31de9dfc94d4a4e5a)
+        ;
+
+        
+    
+    
+            var circle_marker_1ced2b60e84217d8da00e73ccc619a9d = L.circleMarker(
+                [25.004364945322532, 121.59727603206883],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_ba4aeca11b226b5d037a946207321b6b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_aabd9eadd4a5843d411778945e126626 = $(`<div id="html_aabd9eadd4a5843d411778945e126626" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_2554<br>             <b>Speed:</b> 71.0 km/h<br>             <b>Stuck:</b> 1 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_ba4aeca11b226b5d037a946207321b6b.setContent(html_aabd9eadd4a5843d411778945e126626);
+            
+        
+
+        circle_marker_1ced2b60e84217d8da00e73ccc619a9d.bindPopup(popup_ba4aeca11b226b5d037a946207321b6b)
+        ;
+
+        
+    
+    
+            var circle_marker_90cd098e13f6cd8d46f266bc7acd2eb7 = L.circleMarker(
+                [24.983205360119268, 121.59001001368395],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_2cb3b6af85435a1023ec180b2da636f0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8f5277030da2c588d69f3cd4c37fc7e1 = $(`<div id="html_8f5277030da2c588d69f3cd4c37fc7e1" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_1609<br>             <b>Speed:</b> 79.7 km/h<br>             <b>Stuck:</b> 7 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_2cb3b6af85435a1023ec180b2da636f0.setContent(html_8f5277030da2c588d69f3cd4c37fc7e1);
+            
+        
+
+        circle_marker_90cd098e13f6cd8d46f266bc7acd2eb7.bindPopup(popup_2cb3b6af85435a1023ec180b2da636f0)
+        ;
+
+        
+    
+    
+            var circle_marker_0cfead41f23207edb8c1945a9b60e79f = L.circleMarker(
+                [25.064970782644494, 121.52926002470625],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_7159c40f052d8b53efd8dacc12cda4b1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_36d6b1bc024bb4ca675a85404c392cc7 = $(`<div id="html_36d6b1bc024bb4ca675a85404c392cc7" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_5574<br>             <b>Speed:</b> 71.8 km/h<br>             <b>Stuck:</b> 3 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_7159c40f052d8b53efd8dacc12cda4b1.setContent(html_36d6b1bc024bb4ca675a85404c392cc7);
+            
+        
+
+        circle_marker_0cfead41f23207edb8c1945a9b60e79f.bindPopup(popup_7159c40f052d8b53efd8dacc12cda4b1)
+        ;
+
+        
+    
+    
+            var circle_marker_d7405f53b6f179ab5f61220beff6c50e = L.circleMarker(
+                [25.064903042213828, 121.54879170491769],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_3e169384400080a90f7e5f8916e0ebf4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2f9ba503bbf5cf937b93b65167ea96bf = $(`<div id="html_2f9ba503bbf5cf937b93b65167ea96bf" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_9074<br>             <b>Speed:</b> 53.3 km/h<br>             <b>Stuck:</b> 0 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_3e169384400080a90f7e5f8916e0ebf4.setContent(html_2f9ba503bbf5cf937b93b65167ea96bf);
+            
+        
+
+        circle_marker_d7405f53b6f179ab5f61220beff6c50e.bindPopup(popup_3e169384400080a90f7e5f8916e0ebf4)
+        ;
+
+        
+    
+    
+            var circle_marker_2925178062f14c0f2581253a41c58bbe = L.circleMarker(
+                [25.028079706491752, 121.53903809722512],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_a45f65c9c637d4a08801f621918bd0f5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4edd64198fe7096ca527ce6b299a2af4 = $(`<div id="html_4edd64198fe7096ca527ce6b299a2af4" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_1181<br>             <b>Speed:</b> 34.2 km/h<br>             <b>Stuck:</b> 4 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_a45f65c9c637d4a08801f621918bd0f5.setContent(html_4edd64198fe7096ca527ce6b299a2af4);
+            
+        
+
+        circle_marker_2925178062f14c0f2581253a41c58bbe.bindPopup(popup_a45f65c9c637d4a08801f621918bd0f5)
+        ;
+
+        
+    
+    
+            var circle_marker_daff1081414a456ee1c12f8aa5452400 = L.circleMarker(
+                [24.995417870202527, 121.53250576161584],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_74aee5a1fa2f35093df83fecea5f704a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fae58378146395f6f0a06ff842343c54 = $(`<div id="html_fae58378146395f6f0a06ff842343c54" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_9850<br>             <b>Speed:</b> 51.1 km/h<br>             <b>Stuck:</b> 2 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_74aee5a1fa2f35093df83fecea5f704a.setContent(html_fae58378146395f6f0a06ff842343c54);
+            
+        
+
+        circle_marker_daff1081414a456ee1c12f8aa5452400.bindPopup(popup_74aee5a1fa2f35093df83fecea5f704a)
+        ;
+
+        
+    
+    
+            var circle_marker_e83802ea63d4af6ed0c1eaa4814167ff = L.circleMarker(
+                [25.02588239713933, 121.5295318958815],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_d351f087ddf8af295261fce867d03ba1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0e0e061c1a344c31c623ec97d78162f5 = $(`<div id="html_0e0e061c1a344c31c623ec97d78162f5" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_6129<br>             <b>Speed:</b> 59.8 km/h<br>             <b>Stuck:</b> 7 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_d351f087ddf8af295261fce867d03ba1.setContent(html_0e0e061c1a344c31c623ec97d78162f5);
+            
+        
+
+        circle_marker_e83802ea63d4af6ed0c1eaa4814167ff.bindPopup(popup_d351f087ddf8af295261fce867d03ba1)
+        ;
+
+        
+    
+    
+            var circle_marker_f75648c3a4b660388b1e4cd80cd6cdb3 = L.circleMarker(
+                [25.068218093656196, 121.56693242469957],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_dc34408279fac6b77a7faf46e9d10d2e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_baa3c88e91e4fad3d699451c9b0fa742 = $(`<div id="html_baa3c88e91e4fad3d699451c9b0fa742" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_1733<br>             <b>Speed:</b> 25.1 km/h<br>             <b>Stuck:</b> 6 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_dc34408279fac6b77a7faf46e9d10d2e.setContent(html_baa3c88e91e4fad3d699451c9b0fa742);
+            
+        
+
+        circle_marker_f75648c3a4b660388b1e4cd80cd6cdb3.bindPopup(popup_dc34408279fac6b77a7faf46e9d10d2e)
+        ;
+
+        
+    
+    
+            var circle_marker_ea373fe2d122d5fac9494f4f8aef4428 = L.circleMarker(
+                [25.066649568285438, 121.52222065556384],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_f06fa736aa62799ab1228cb4af1d8eb5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c0755e42e89b224728fcef5c73514eb2 = $(`<div id="html_c0755e42e89b224728fcef5c73514eb2" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_2050<br>             <b>Speed:</b> 58.6 km/h<br>             <b>Stuck:</b> 4 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_f06fa736aa62799ab1228cb4af1d8eb5.setContent(html_c0755e42e89b224728fcef5c73514eb2);
+            
+        
+
+        circle_marker_ea373fe2d122d5fac9494f4f8aef4428.bindPopup(popup_f06fa736aa62799ab1228cb4af1d8eb5)
+        ;
+
+        
+    
+    
+            var circle_marker_dc04cc4909f7664c2405e1f2e229d9af = L.circleMarker(
+                [25.03431161827149, 121.57133261421217],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_9c778efb2c3a4b2bbcc6bb2d02fdc623 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4f25cfe5aa629630de19b112265a6c28 = $(`<div id="html_4f25cfe5aa629630de19b112265a6c28" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_7112<br>             <b>Speed:</b> 47.1 km/h<br>             <b>Stuck:</b> 8 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_9c778efb2c3a4b2bbcc6bb2d02fdc623.setContent(html_4f25cfe5aa629630de19b112265a6c28);
+            
+        
+
+        circle_marker_dc04cc4909f7664c2405e1f2e229d9af.bindPopup(popup_9c778efb2c3a4b2bbcc6bb2d02fdc623)
+        ;
+
+        
+    
+    
+            var circle_marker_50194ed0b591a39489e5ee195bba9dc1 = L.circleMarker(
+                [25.016536716138987, 121.5281023565346],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_aa0d0d2e426c9df00ffddbd375833b1d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5d13a2fbc1392f7050b6eb379cf4046d = $(`<div id="html_5d13a2fbc1392f7050b6eb379cf4046d" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_3848<br>             <b>Speed:</b> 31.6 km/h<br>             <b>Stuck:</b> 4 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_aa0d0d2e426c9df00ffddbd375833b1d.setContent(html_5d13a2fbc1392f7050b6eb379cf4046d);
+            
+        
+
+        circle_marker_50194ed0b591a39489e5ee195bba9dc1.bindPopup(popup_aa0d0d2e426c9df00ffddbd375833b1d)
+        ;
+
+        
+    
+    
+            var circle_marker_294fc11f6a69cc50f0e4dd1c942274c9 = L.circleMarker(
+                [25.061342672528138, 121.60585053486305],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_9c1a2fb8521c3030ac02bd4e84dbc732 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ec762e8ff54038331cf11cbbe8daf731 = $(`<div id="html_ec762e8ff54038331cf11cbbe8daf731" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_2887<br>             <b>Speed:</b> 35.4 km/h<br>             <b>Stuck:</b> 8 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_9c1a2fb8521c3030ac02bd4e84dbc732.setContent(html_ec762e8ff54038331cf11cbbe8daf731);
+            
+        
+
+        circle_marker_294fc11f6a69cc50f0e4dd1c942274c9.bindPopup(popup_9c1a2fb8521c3030ac02bd4e84dbc732)
+        ;
+
+        
+    
+    
+            var circle_marker_4e4471367063152049fc8baf375b7a54 = L.circleMarker(
+                [25.045073440127105, 121.60790432930021],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_05091eca7cf7ba3528cb8b906ca3c594 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f35239c73742ca0b031fbce7d6a2f170 = $(`<div id="html_f35239c73742ca0b031fbce7d6a2f170" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_2657<br>             <b>Speed:</b> 51.9 km/h<br>             <b>Stuck:</b> 3 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_05091eca7cf7ba3528cb8b906ca3c594.setContent(html_f35239c73742ca0b031fbce7d6a2f170);
+            
+        
+
+        circle_marker_4e4471367063152049fc8baf375b7a54.bindPopup(popup_05091eca7cf7ba3528cb8b906ca3c594)
+        ;
+
+        
+    
+    
+            var circle_marker_314e1ccf6d6b27fd19c0fd9be2773f64 = L.circleMarker(
+                [25.076378471487683, 121.5263494472857],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_ed5a5417709900c18a27e06e39bb19b6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_38302beb29a3a217952aad74dd093bc7 = $(`<div id="html_38302beb29a3a217952aad74dd093bc7" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_5184<br>             <b>Speed:</b> 69.9 km/h<br>             <b>Stuck:</b> 9 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_ed5a5417709900c18a27e06e39bb19b6.setContent(html_38302beb29a3a217952aad74dd093bc7);
+            
+        
+
+        circle_marker_314e1ccf6d6b27fd19c0fd9be2773f64.bindPopup(popup_ed5a5417709900c18a27e06e39bb19b6)
+        ;
+
+        
+    
+    
+            var circle_marker_2404505e2eeabb27e830b6a98f6ab7b7 = L.circleMarker(
+                [25.074668391519875, 121.6040338642251],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_5e3c07d9676cc055782b0c36361c561f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_94cc989e58a54fef618f032100328385 = $(`<div id="html_94cc989e58a54fef618f032100328385" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_6490<br>             <b>Speed:</b> 58.6 km/h<br>             <b>Stuck:</b> 7 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_5e3c07d9676cc055782b0c36361c561f.setContent(html_94cc989e58a54fef618f032100328385);
+            
+        
+
+        circle_marker_2404505e2eeabb27e830b6a98f6ab7b7.bindPopup(popup_5e3c07d9676cc055782b0c36361c561f)
+        ;
+
+        
+    
+    
+            var circle_marker_c1eafee2d87a5c82316340839f63d62e = L.circleMarker(
+                [25.028149435332896, 121.60437444385367],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_eb5ef488d7a29d559b817b1c67796e8c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_add1e8967e20a63f79b1aa0efa26669e = $(`<div id="html_add1e8967e20a63f79b1aa0efa26669e" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_4032<br>             <b>Speed:</b> 74.2 km/h<br>             <b>Stuck:</b> 1 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_eb5ef488d7a29d559b817b1c67796e8c.setContent(html_add1e8967e20a63f79b1aa0efa26669e);
+            
+        
+
+        circle_marker_c1eafee2d87a5c82316340839f63d62e.bindPopup(popup_eb5ef488d7a29d559b817b1c67796e8c)
+        ;
+
+        
+    
+    
+            var circle_marker_7002be410dc4d1c0e2b74201bad813aa = L.circleMarker(
+                [25.034714901283202, 121.59141802871281],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_2b1e1aa0b7c77c2c5608715725c2def3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_29e565cbe3f92fc7c92936d05b6fad6e = $(`<div id="html_29e565cbe3f92fc7c92936d05b6fad6e" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_9672<br>             <b>Speed:</b> 73.1 km/h<br>             <b>Stuck:</b> 7 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_2b1e1aa0b7c77c2c5608715725c2def3.setContent(html_29e565cbe3f92fc7c92936d05b6fad6e);
+            
+        
+
+        circle_marker_7002be410dc4d1c0e2b74201bad813aa.bindPopup(popup_2b1e1aa0b7c77c2c5608715725c2def3)
+        ;
+
+        
+    
+    
+            var circle_marker_673d66f8288f240f3479b2a80a2b845f = L.circleMarker(
+                [25.07041488027378, 121.55103244024855],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_3dc4f147f7d2d5da4abbd3f2e601faa9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3b3280ea245586cabf856189709c1e09 = $(`<div id="html_3b3280ea245586cabf856189709c1e09" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_3302<br>             <b>Speed:</b> 59.6 km/h<br>             <b>Stuck:</b> 2 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_3dc4f147f7d2d5da4abbd3f2e601faa9.setContent(html_3b3280ea245586cabf856189709c1e09);
+            
+        
+
+        circle_marker_673d66f8288f240f3479b2a80a2b845f.bindPopup(popup_3dc4f147f7d2d5da4abbd3f2e601faa9)
+        ;
+
+        
+    
+    
+            var circle_marker_96b64418a0644a643a66ede8323c11cb = L.circleMarker(
+                [25.001321108966238, 121.61007119760431],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_b3457684bb51d49d4433064eb2e68b08 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_262447f83caba1c6f65739e32eb53e30 = $(`<div id="html_262447f83caba1c6f65739e32eb53e30" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_5170<br>             <b>Speed:</b> 76.7 km/h<br>             <b>Stuck:</b> 8 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_b3457684bb51d49d4433064eb2e68b08.setContent(html_262447f83caba1c6f65739e32eb53e30);
+            
+        
+
+        circle_marker_96b64418a0644a643a66ede8323c11cb.bindPopup(popup_b3457684bb51d49d4433064eb2e68b08)
+        ;
+
+        
+    
+    
+            var circle_marker_4ea5d506325edf2e3ae6858e5569cb5d = L.circleMarker(
+                [25.01408480292809, 121.5591881563023],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_14d2677541b378862c658fa2ad80b155 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c1e157596da34cc20600876f661c2c9a = $(`<div id="html_c1e157596da34cc20600876f661c2c9a" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_3173<br>             <b>Speed:</b> 73.8 km/h<br>             <b>Stuck:</b> 0 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_14d2677541b378862c658fa2ad80b155.setContent(html_c1e157596da34cc20600876f661c2c9a);
+            
+        
+
+        circle_marker_4ea5d506325edf2e3ae6858e5569cb5d.bindPopup(popup_14d2677541b378862c658fa2ad80b155)
+        ;
+
+        
+    
+    
+            var circle_marker_ccd7e7bdbb5f05065ab6f40a314a1ba2 = L.circleMarker(
+                [25.047960442163927, 121.58716700949326],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_dcad9df2a8f4a9a76096abc63b12a46e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6c35289d042eafd921f8f03508f19b75 = $(`<div id="html_6c35289d042eafd921f8f03508f19b75" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_1319<br>             <b>Speed:</b> 51.8 km/h<br>             <b>Stuck:</b> 3 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_dcad9df2a8f4a9a76096abc63b12a46e.setContent(html_6c35289d042eafd921f8f03508f19b75);
+            
+        
+
+        circle_marker_ccd7e7bdbb5f05065ab6f40a314a1ba2.bindPopup(popup_dcad9df2a8f4a9a76096abc63b12a46e)
+        ;
+
+        
+    
+    
+            var circle_marker_9b18f22f8ae3dd40690bcb0b163ce1d9 = L.circleMarker(
+                [25.042144676691148, 121.61099632558809],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_b0967f07c3b3af0e7b9c3e4188b85330 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_367f2959aa586b57b837e6d20634fbff = $(`<div id="html_367f2959aa586b57b837e6d20634fbff" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_3650<br>             <b>Speed:</b> 59.8 km/h<br>             <b>Stuck:</b> 4 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_b0967f07c3b3af0e7b9c3e4188b85330.setContent(html_367f2959aa586b57b837e6d20634fbff);
+            
+        
+
+        circle_marker_9b18f22f8ae3dd40690bcb0b163ce1d9.bindPopup(popup_b0967f07c3b3af0e7b9c3e4188b85330)
+        ;
+
+        
+    
+    
+            var circle_marker_74dfaff9a316d941c552255382ba3d22 = L.circleMarker(
+                [25.076490536776845, 121.56527781894972],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_84fecce266e2ae177fc1f996e4b8e078 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0491f7f6c13fc21412ffb5d3ddff6c0e = $(`<div id="html_0491f7f6c13fc21412ffb5d3ddff6c0e" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_2740<br>             <b>Speed:</b> 72.7 km/h<br>             <b>Stuck:</b> 1 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_84fecce266e2ae177fc1f996e4b8e078.setContent(html_0491f7f6c13fc21412ffb5d3ddff6c0e);
+            
+        
+
+        circle_marker_74dfaff9a316d941c552255382ba3d22.bindPopup(popup_84fecce266e2ae177fc1f996e4b8e078)
+        ;
+
+        
+    
+    
+            var circle_marker_a7db2adc91c6d0877a16c3267da7e28a = L.circleMarker(
+                [25.013462980387363, 121.53920075486387],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_98149baeae4c81b9b59f88befdec9552 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4b106cd7450acea1886667ccd561648a = $(`<div id="html_4b106cd7450acea1886667ccd561648a" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_2210<br>             <b>Speed:</b> 30.1 km/h<br>             <b>Stuck:</b> 3 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_98149baeae4c81b9b59f88befdec9552.setContent(html_4b106cd7450acea1886667ccd561648a);
+            
+        
+
+        circle_marker_a7db2adc91c6d0877a16c3267da7e28a.bindPopup(popup_98149baeae4c81b9b59f88befdec9552)
+        ;
+
+        
+    
+    
+            var circle_marker_18390ad1edfb40708ee2df0f91d2a730 = L.circleMarker(
+                [24.98575029337714, 121.54432951338121],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_c51bdea03c3b0f0e880ccc922c0c1e6c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_67f8b700ae1dd8394449e13972863d43 = $(`<div id="html_67f8b700ae1dd8394449e13972863d43" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_7131<br>             <b>Speed:</b> 43.8 km/h<br>             <b>Stuck:</b> 3 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_c51bdea03c3b0f0e880ccc922c0c1e6c.setContent(html_67f8b700ae1dd8394449e13972863d43);
+            
+        
+
+        circle_marker_18390ad1edfb40708ee2df0f91d2a730.bindPopup(popup_c51bdea03c3b0f0e880ccc922c0c1e6c)
+        ;
+
+        
+    
+    
+            var circle_marker_02e50d75fe8efb660a4795708674199c = L.circleMarker(
+                [25.062844561493712, 121.61275257599321],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_f8bb1b0115e2cf0f05843b3619a174a0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f99a05667a4ddc7af66dfa85fa9a13ea = $(`<div id="html_f99a05667a4ddc7af66dfa85fa9a13ea" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_4007<br>             <b>Speed:</b> 61.2 km/h<br>             <b>Stuck:</b> 5 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_f8bb1b0115e2cf0f05843b3619a174a0.setContent(html_f99a05667a4ddc7af66dfa85fa9a13ea);
+            
+        
+
+        circle_marker_02e50d75fe8efb660a4795708674199c.bindPopup(popup_f8bb1b0115e2cf0f05843b3619a174a0)
+        ;
+
+        
+    
+    
+            var circle_marker_7ea325a968cbe089808b79f33171430f = L.circleMarker(
+                [25.043906699897786, 121.55119845552184],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_03cf8e8e7ea1e40efa6e7f6b092f7cc1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c78b876989186f7fa501a1adf39b06f4 = $(`<div id="html_c78b876989186f7fa501a1adf39b06f4" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_2631<br>             <b>Speed:</b> 34.9 km/h<br>             <b>Stuck:</b> 9 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_03cf8e8e7ea1e40efa6e7f6b092f7cc1.setContent(html_c78b876989186f7fa501a1adf39b06f4);
+            
+        
+
+        circle_marker_7ea325a968cbe089808b79f33171430f.bindPopup(popup_03cf8e8e7ea1e40efa6e7f6b092f7cc1)
+        ;
+
+        
+    
+    
+            var circle_marker_385cb782c7905de5d2a4b88a9e3125bd = L.circleMarker(
+                [25.055921929100794, 121.5276748749039],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_1501d07b8ef9c51a5146230478bf52bf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_432f9e74a9acb859ddd92aae9508efcc = $(`<div id="html_432f9e74a9acb859ddd92aae9508efcc" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_2141<br>             <b>Speed:</b> 43.1 km/h<br>             <b>Stuck:</b> 1 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_1501d07b8ef9c51a5146230478bf52bf.setContent(html_432f9e74a9acb859ddd92aae9508efcc);
+            
+        
+
+        circle_marker_385cb782c7905de5d2a4b88a9e3125bd.bindPopup(popup_1501d07b8ef9c51a5146230478bf52bf)
+        ;
+
+        
+    
+    
+            var circle_marker_47b4ab56e30cac9fa5eb0c59f21bf278 = L.circleMarker(
+                [25.070513397413738, 121.60729059745566],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_52943ed1cec923adb40e4c52e887cf94 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8b167dca148088d239edc7861402e9a3 = $(`<div id="html_8b167dca148088d239edc7861402e9a3" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_7378<br>             <b>Speed:</b> 48.5 km/h<br>             <b>Stuck:</b> 4 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_52943ed1cec923adb40e4c52e887cf94.setContent(html_8b167dca148088d239edc7861402e9a3);
+            
+        
+
+        circle_marker_47b4ab56e30cac9fa5eb0c59f21bf278.bindPopup(popup_52943ed1cec923adb40e4c52e887cf94)
+        ;
+
+        
+    
+    
+            var circle_marker_eb36ae83274071656a4fffae514340d6 = L.circleMarker(
+                [25.06429460077891, 121.54796754493152],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_fed4e41692f62f088751a22801e839cf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2341e447728f84350125414508c8890a = $(`<div id="html_2341e447728f84350125414508c8890a" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_4467<br>             <b>Speed:</b> 32.1 km/h<br>             <b>Stuck:</b> 5 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_fed4e41692f62f088751a22801e839cf.setContent(html_2341e447728f84350125414508c8890a);
+            
+        
+
+        circle_marker_eb36ae83274071656a4fffae514340d6.bindPopup(popup_fed4e41692f62f088751a22801e839cf)
+        ;
+
+        
+    
+    
+            var circle_marker_1a7dddf2b5265872f92bad63db6a41c4 = L.circleMarker(
+                [25.065941193455924, 121.56023058682432],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_7f8f17eeb67e730551ac3643a44b54f2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_81925a1b680f25a1b201815b2dc6b984 = $(`<div id="html_81925a1b680f25a1b201815b2dc6b984" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_7177<br>             <b>Speed:</b> 68.1 km/h<br>             <b>Stuck:</b> 9 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_7f8f17eeb67e730551ac3643a44b54f2.setContent(html_81925a1b680f25a1b201815b2dc6b984);
+            
+        
+
+        circle_marker_1a7dddf2b5265872f92bad63db6a41c4.bindPopup(popup_7f8f17eeb67e730551ac3643a44b54f2)
+        ;
+
+        
+    
+    
+            var circle_marker_19c1022e242bc36c65f1e4d3b1bd5f3a = L.circleMarker(
+                [24.990463657319655, 121.52927883528737],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_77b857a9050fcfa7a9abe9cef5fe9986 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_682772cfe17401b42837648ff62f50a9 = $(`<div id="html_682772cfe17401b42837648ff62f50a9" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_9741<br>             <b>Speed:</b> 66.3 km/h<br>             <b>Stuck:</b> 0 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_77b857a9050fcfa7a9abe9cef5fe9986.setContent(html_682772cfe17401b42837648ff62f50a9);
+            
+        
+
+        circle_marker_19c1022e242bc36c65f1e4d3b1bd5f3a.bindPopup(popup_77b857a9050fcfa7a9abe9cef5fe9986)
+        ;
+
+        
+    
+    
+            var circle_marker_933497c84be41c4198d1279b6a3e9b28 = L.circleMarker(
+                [25.0686428795732, 121.52351205888509],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_5ac09e0d3f317a900976a914e5623b58 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6aedfb414d00c7130722d5f088aa5c5d = $(`<div id="html_6aedfb414d00c7130722d5f088aa5c5d" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_3199<br>             <b>Speed:</b> 41.4 km/h<br>             <b>Stuck:</b> 5 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_5ac09e0d3f317a900976a914e5623b58.setContent(html_6aedfb414d00c7130722d5f088aa5c5d);
+            
+        
+
+        circle_marker_933497c84be41c4198d1279b6a3e9b28.bindPopup(popup_5ac09e0d3f317a900976a914e5623b58)
+        ;
+
+        
+    
+    
+            var circle_marker_9368d2a7b99218ca9c5d96e3337ef4ed = L.circleMarker(
+                [25.01770304295345, 121.5828859233308],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_1c29339ba0cdb067f7c962392b7a3b5c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b7a9603c0604a5e18e56fcbb6a829c68 = $(`<div id="html_b7a9603c0604a5e18e56fcbb6a829c68" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_4653<br>             <b>Speed:</b> 38.9 km/h<br>             <b>Stuck:</b> 6 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_1c29339ba0cdb067f7c962392b7a3b5c.setContent(html_b7a9603c0604a5e18e56fcbb6a829c68);
+            
+        
+
+        circle_marker_9368d2a7b99218ca9c5d96e3337ef4ed.bindPopup(popup_1c29339ba0cdb067f7c962392b7a3b5c)
+        ;
+
+        
+    
+    
+            var circle_marker_68da6492b8e8bc13988d08609f8961ed = L.circleMarker(
+                [24.992163820961178, 121.60242604149124],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_45cfcbe4e5db38db869c21f2a4588b52 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_49e5143704400eb65374d5872d0df540 = $(`<div id="html_49e5143704400eb65374d5872d0df540" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_4397<br>             <b>Speed:</b> 27.4 km/h<br>             <b>Stuck:</b> 8 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_45cfcbe4e5db38db869c21f2a4588b52.setContent(html_49e5143704400eb65374d5872d0df540);
+            
+        
+
+        circle_marker_68da6492b8e8bc13988d08609f8961ed.bindPopup(popup_45cfcbe4e5db38db869c21f2a4588b52)
+        ;
+
+        
+    
+    
+            var circle_marker_9fdacdb37ab43874b9acdebee632845b = L.circleMarker(
+                [25.04528965323217, 121.60120322037349],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_27aa9bdef84c7afa3c37381bb119c5fc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_76a0f396aba8a7fa00a9c00eaae7ec34 = $(`<div id="html_76a0f396aba8a7fa00a9c00eaae7ec34" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_8555<br>             <b>Speed:</b> 64.0 km/h<br>             <b>Stuck:</b> 7 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_27aa9bdef84c7afa3c37381bb119c5fc.setContent(html_76a0f396aba8a7fa00a9c00eaae7ec34);
+            
+        
+
+        circle_marker_9fdacdb37ab43874b9acdebee632845b.bindPopup(popup_27aa9bdef84c7afa3c37381bb119c5fc)
+        ;
+
+        
+    
+    
+            var circle_marker_d335207bd88a415f3d8c83e205ed11a4 = L.circleMarker(
+                [25.029462984508402, 121.53426140732878],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_758422ac5753d4914f566465cc314675 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0ff036566eada710739ba34c5524e240 = $(`<div id="html_0ff036566eada710739ba34c5524e240" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_9221<br>             <b>Speed:</b> 28.9 km/h<br>             <b>Stuck:</b> 5 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_758422ac5753d4914f566465cc314675.setContent(html_0ff036566eada710739ba34c5524e240);
+            
+        
+
+        circle_marker_d335207bd88a415f3d8c83e205ed11a4.bindPopup(popup_758422ac5753d4914f566465cc314675)
+        ;
+
+        
+    
+    
+            var circle_marker_f8d1a9552e626591fc78ae6f46d8a262 = L.circleMarker(
+                [25.072830858934342, 121.53409550688787],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_94794067ec18b6980fce898f4beb28c0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_afda79df8b5766ca4e6a69f3f56e22a2 = $(`<div id="html_afda79df8b5766ca4e6a69f3f56e22a2" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_8554<br>             <b>Speed:</b> 55.2 km/h<br>             <b>Stuck:</b> 5 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_94794067ec18b6980fce898f4beb28c0.setContent(html_afda79df8b5766ca4e6a69f3f56e22a2);
+            
+        
+
+        circle_marker_f8d1a9552e626591fc78ae6f46d8a262.bindPopup(popup_94794067ec18b6980fce898f4beb28c0)
+        ;
+
+        
+    
+    
+            var circle_marker_4c2cce14168076064e8b6c1c83c8871e = L.circleMarker(
+                [25.05253571800087, 121.54367997997379],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_54df0f0e261d8251ce8f89b3cc7be2b4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1b8211718a6e2dd1f3770e2c21a2e181 = $(`<div id="html_1b8211718a6e2dd1f3770e2c21a2e181" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_8013<br>             <b>Speed:</b> 66.5 km/h<br>             <b>Stuck:</b> 7 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_54df0f0e261d8251ce8f89b3cc7be2b4.setContent(html_1b8211718a6e2dd1f3770e2c21a2e181);
+            
+        
+
+        circle_marker_4c2cce14168076064e8b6c1c83c8871e.bindPopup(popup_54df0f0e261d8251ce8f89b3cc7be2b4)
+        ;
+
+        
+    
+    
+            var circle_marker_6de2feeca05291a54319803041713bca = L.circleMarker(
+                [25.04741263591759, 121.59642876216448],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_b317f059c6e755803210861df582e420 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e94fa088e034c223f6bec346f50e296f = $(`<div id="html_e94fa088e034c223f6bec346f50e296f" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_3469<br>             <b>Speed:</b> 41.0 km/h<br>             <b>Stuck:</b> 2 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_b317f059c6e755803210861df582e420.setContent(html_e94fa088e034c223f6bec346f50e296f);
+            
+        
+
+        circle_marker_6de2feeca05291a54319803041713bca.bindPopup(popup_b317f059c6e755803210861df582e420)
+        ;
+
+        
+    
+    
+            var circle_marker_c66f067a1bf46a6d54b4a0902f112cbe = L.circleMarker(
+                [25.066331982926755, 121.56642878292864],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_b375f987f20df5b988d15894a6d45ba9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1f4dfb2d90525c060ce29d092200770a = $(`<div id="html_1f4dfb2d90525c060ce29d092200770a" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_7015<br>             <b>Speed:</b> 17.6 km/h<br>             <b>Stuck:</b> 5 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_b375f987f20df5b988d15894a6d45ba9.setContent(html_1f4dfb2d90525c060ce29d092200770a);
+            
+        
+
+        circle_marker_c66f067a1bf46a6d54b4a0902f112cbe.bindPopup(popup_b375f987f20df5b988d15894a6d45ba9)
+        ;
+
+        
+    
+    
+            var circle_marker_d7663e72eb2f3f962c1cef8e974bfbea = L.circleMarker(
+                [25.042146388068442, 121.54961152205195],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_b34384354beae405143276411926d059 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_13fd79e5a04178dcd4d277cd13d17393 = $(`<div id="html_13fd79e5a04178dcd4d277cd13d17393" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_3656<br>             <b>Speed:</b> 66.3 km/h<br>             <b>Stuck:</b> 7 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_b34384354beae405143276411926d059.setContent(html_13fd79e5a04178dcd4d277cd13d17393);
+            
+        
+
+        circle_marker_d7663e72eb2f3f962c1cef8e974bfbea.bindPopup(popup_b34384354beae405143276411926d059)
+        ;
+
+        
+    
+    
+            var circle_marker_373764fca49ed0af73d08b017df8f617 = L.circleMarker(
+                [25.07654170401411, 121.52183104083095],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_fcb3261d72d12e664b158b1f98bb84df = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3fa913a82638e75ebacc20c032450e0a = $(`<div id="html_3fa913a82638e75ebacc20c032450e0a" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_2888<br>             <b>Speed:</b> 18.6 km/h<br>             <b>Stuck:</b> 1 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_fcb3261d72d12e664b158b1f98bb84df.setContent(html_3fa913a82638e75ebacc20c032450e0a);
+            
+        
+
+        circle_marker_373764fca49ed0af73d08b017df8f617.bindPopup(popup_fcb3261d72d12e664b158b1f98bb84df)
+        ;
+
+        
+    
+    
+            var circle_marker_fc82602bec34033ad217b9e375106e9c = L.circleMarker(
+                [24.99605250585696, 121.55474908009477],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_3e3a408a8d13602ec8130c1ae95ff61b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_518e5fe8c53802eede74d335cc17a378 = $(`<div id="html_518e5fe8c53802eede74d335cc17a378" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_5416<br>             <b>Speed:</b> 14.0 km/h<br>             <b>Stuck:</b> 1 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_3e3a408a8d13602ec8130c1ae95ff61b.setContent(html_518e5fe8c53802eede74d335cc17a378);
+            
+        
+
+        circle_marker_fc82602bec34033ad217b9e375106e9c.bindPopup(popup_3e3a408a8d13602ec8130c1ae95ff61b)
+        ;
+
+        
+    
+    
+            var circle_marker_8369ca0e71c6b08e65f79b735dd77e32 = L.circleMarker(
+                [25.077389675422715, 121.52158323220122],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_1d379326930f5b5a1ee9da5f0bf67462 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d371b6f2f7139b76ae5fd3dc56bd7751 = $(`<div id="html_d371b6f2f7139b76ae5fd3dc56bd7751" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_6490<br>             <b>Speed:</b> 50.7 km/h<br>             <b>Stuck:</b> 0 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_1d379326930f5b5a1ee9da5f0bf67462.setContent(html_d371b6f2f7139b76ae5fd3dc56bd7751);
+            
+        
+
+        circle_marker_8369ca0e71c6b08e65f79b735dd77e32.bindPopup(popup_1d379326930f5b5a1ee9da5f0bf67462)
+        ;
+
+        
+    
+    
+            var circle_marker_b9368382634c5ba38138da574fd8b6cd = L.circleMarker(
+                [25.01952979402641, 121.59303844916141],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_fbeeacaa02c52c64ae1b107dd77afad9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fb967ea80d28d198f71bd23dc11f6537 = $(`<div id="html_fb967ea80d28d198f71bd23dc11f6537" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_4584<br>             <b>Speed:</b> 60.2 km/h<br>             <b>Stuck:</b> 5 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_fbeeacaa02c52c64ae1b107dd77afad9.setContent(html_fb967ea80d28d198f71bd23dc11f6537);
+            
+        
+
+        circle_marker_b9368382634c5ba38138da574fd8b6cd.bindPopup(popup_fbeeacaa02c52c64ae1b107dd77afad9)
+        ;
+
+        
+    
+    
+            var circle_marker_fae23cf92e156c1945fa51ebcfb0f323 = L.circleMarker(
+                [25.02411413079835, 121.54847485374208],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_dd7418981afa357ef28b57453efbd616 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7998d6d8c1f59b46845470dab667d3d2 = $(`<div id="html_7998d6d8c1f59b46845470dab667d3d2" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_6065<br>             <b>Speed:</b> 24.9 km/h<br>             <b>Stuck:</b> 0 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_dd7418981afa357ef28b57453efbd616.setContent(html_7998d6d8c1f59b46845470dab667d3d2);
+            
+        
+
+        circle_marker_fae23cf92e156c1945fa51ebcfb0f323.bindPopup(popup_dd7418981afa357ef28b57453efbd616)
+        ;
+
+        
+    
+    
+            var circle_marker_5bb84cc88da49a27a006b6c853ce54b2 = L.circleMarker(
+                [24.984230509866766, 121.5877879206119],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_a797bb597382efa6f83ecc929034cbee = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f565bdc03086cc6c4a8bec1eec5fc306 = $(`<div id="html_f565bdc03086cc6c4a8bec1eec5fc306" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_2795<br>             <b>Speed:</b> 33.0 km/h<br>             <b>Stuck:</b> 3 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_a797bb597382efa6f83ecc929034cbee.setContent(html_f565bdc03086cc6c4a8bec1eec5fc306);
+            
+        
+
+        circle_marker_5bb84cc88da49a27a006b6c853ce54b2.bindPopup(popup_a797bb597382efa6f83ecc929034cbee)
+        ;
+
+        
+    
+    
+            var circle_marker_ff7270444f1ff0f439906212acaf9ebf = L.circleMarker(
+                [24.99617906998582, 121.56188032558843],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_73f3863053bdbec6e61d377ce7e9810d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_90348c0c6cfb60b6f4e110406fa323a7 = $(`<div id="html_90348c0c6cfb60b6f4e110406fa323a7" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_4189<br>             <b>Speed:</b> 73.5 km/h<br>             <b>Stuck:</b> 5 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_73f3863053bdbec6e61d377ce7e9810d.setContent(html_90348c0c6cfb60b6f4e110406fa323a7);
+            
+        
+
+        circle_marker_ff7270444f1ff0f439906212acaf9ebf.bindPopup(popup_73f3863053bdbec6e61d377ce7e9810d)
+        ;
+
+        
+    
+    
+            var circle_marker_b9281a88238848344859ed94d7ee1671 = L.circleMarker(
+                [25.07742216215266, 121.51744921283574],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_b5afe14b80fdd37d50362053624e7b9f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a68f2cb4675662d91d630d901063ac38 = $(`<div id="html_a68f2cb4675662d91d630d901063ac38" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_1349<br>             <b>Speed:</b> 34.5 km/h<br>             <b>Stuck:</b> 0 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_b5afe14b80fdd37d50362053624e7b9f.setContent(html_a68f2cb4675662d91d630d901063ac38);
+            
+        
+
+        circle_marker_b9281a88238848344859ed94d7ee1671.bindPopup(popup_b5afe14b80fdd37d50362053624e7b9f)
+        ;
+
+        
+    
+    
+            var circle_marker_dc95b7820a5f1efc8306cc50411bdd1c = L.circleMarker(
+                [24.986556226064437, 121.60320585187688],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_dbbfa0da3a52dee68cd799b904a72429 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2ba6a5bc326b3a073920eb9ab3b2d940 = $(`<div id="html_2ba6a5bc326b3a073920eb9ab3b2d940" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_6220<br>             <b>Speed:</b> 57.7 km/h<br>             <b>Stuck:</b> 0 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_dbbfa0da3a52dee68cd799b904a72429.setContent(html_2ba6a5bc326b3a073920eb9ab3b2d940);
+            
+        
+
+        circle_marker_dc95b7820a5f1efc8306cc50411bdd1c.bindPopup(popup_dbbfa0da3a52dee68cd799b904a72429)
+        ;
+
+        
+    
+    
+            var circle_marker_4e084fa24825c62391764b3312fddc29 = L.circleMarker(
+                [25.080344668874368, 121.56480156008267],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_2945e40da28e287332b4cb58f9132df4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_151d208e826247c2e64f8b2c16af5769 = $(`<div id="html_151d208e826247c2e64f8b2c16af5769" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_7282<br>             <b>Speed:</b> 28.1 km/h<br>             <b>Stuck:</b> 9 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_2945e40da28e287332b4cb58f9132df4.setContent(html_151d208e826247c2e64f8b2c16af5769);
+            
+        
+
+        circle_marker_4e084fa24825c62391764b3312fddc29.bindPopup(popup_2945e40da28e287332b4cb58f9132df4)
+        ;
+
+        
+    
+    
+            var circle_marker_6e99bbd82b3224b4558addf812d7089e = L.circleMarker(
+                [24.991744007276374, 121.58073108734202],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_c3106ff599ba6a07741c946527800eaf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cb6a2775fb7c1a9a945a76a8288a30a5 = $(`<div id="html_cb6a2775fb7c1a9a945a76a8288a30a5" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_8195<br>             <b>Speed:</b> 18.2 km/h<br>             <b>Stuck:</b> 0 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_c3106ff599ba6a07741c946527800eaf.setContent(html_cb6a2775fb7c1a9a945a76a8288a30a5);
+            
+        
+
+        circle_marker_6e99bbd82b3224b4558addf812d7089e.bindPopup(popup_c3106ff599ba6a07741c946527800eaf)
+        ;
+
+        
+    
+    
+            var circle_marker_f03cb330af6a0500fb9c72720ea6115a = L.circleMarker(
+                [25.07033273013424, 121.54568280547329],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_81ab0d07628807340a91fb7b0529108e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_26f06fb0a72cb945fedf35eef406dc9b = $(`<div id="html_26f06fb0a72cb945fedf35eef406dc9b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_3361<br>             <b>Speed:</b> 74.9 km/h<br>             <b>Stuck:</b> 9 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_81ab0d07628807340a91fb7b0529108e.setContent(html_26f06fb0a72cb945fedf35eef406dc9b);
+            
+        
+
+        circle_marker_f03cb330af6a0500fb9c72720ea6115a.bindPopup(popup_81ab0d07628807340a91fb7b0529108e)
+        ;
+
+        
+    
+    
+            var circle_marker_aa25445286c662037ae2cc72c6c91eac = L.circleMarker(
+                [25.005987641066742, 121.53906644777997],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_7f340e1addb98c697e4d4924a9eeeebb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c1e3ddcc0eb38100d1909cd11d1bf7b1 = $(`<div id="html_c1e3ddcc0eb38100d1909cd11d1bf7b1" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_8601<br>             <b>Speed:</b> 72.6 km/h<br>             <b>Stuck:</b> 0 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_7f340e1addb98c697e4d4924a9eeeebb.setContent(html_c1e3ddcc0eb38100d1909cd11d1bf7b1);
+            
+        
+
+        circle_marker_aa25445286c662037ae2cc72c6c91eac.bindPopup(popup_7f340e1addb98c697e4d4924a9eeeebb)
+        ;
+
+        
+    
+    
+            var circle_marker_1792ab3c4cf8d8523aff39a8c4c47d4e = L.circleMarker(
+                [25.03914369572747, 121.53505080489083],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_6319b8f4f741b6b382f03cdcc01922c5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_68612831ab139c1981d7f5f9e527ea84 = $(`<div id="html_68612831ab139c1981d7f5f9e527ea84" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_4960<br>             <b>Speed:</b> 62.6 km/h<br>             <b>Stuck:</b> 1 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_6319b8f4f741b6b382f03cdcc01922c5.setContent(html_68612831ab139c1981d7f5f9e527ea84);
+            
+        
+
+        circle_marker_1792ab3c4cf8d8523aff39a8c4c47d4e.bindPopup(popup_6319b8f4f741b6b382f03cdcc01922c5)
+        ;
+
+        
+    
+    
+            var circle_marker_e2313ebf0258f204824aa160d560f552 = L.circleMarker(
+                [25.046807933456176, 121.57087407334342],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_2a382ff284c0f654a4c90530151a9baa = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_294d2c31b6c9453ef85f0f0d40c62b77 = $(`<div id="html_294d2c31b6c9453ef85f0f0d40c62b77" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_2575<br>             <b>Speed:</b> 33.5 km/h<br>             <b>Stuck:</b> 9 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_2a382ff284c0f654a4c90530151a9baa.setContent(html_294d2c31b6c9453ef85f0f0d40c62b77);
+            
+        
+
+        circle_marker_e2313ebf0258f204824aa160d560f552.bindPopup(popup_2a382ff284c0f654a4c90530151a9baa)
+        ;
+
+        
+    
+    
+            var circle_marker_4ca7b0cbcb81ec297c4eb1281ab11381 = L.circleMarker(
+                [25.008777689239253, 121.59176464927235],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_d469bd178af957242a168b31cdf61317 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fd8ddfa4329c7366167aa5b2fdcb10ca = $(`<div id="html_fd8ddfa4329c7366167aa5b2fdcb10ca" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_1878<br>             <b>Speed:</b> 31.3 km/h<br>             <b>Stuck:</b> 3 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_d469bd178af957242a168b31cdf61317.setContent(html_fd8ddfa4329c7366167aa5b2fdcb10ca);
+            
+        
+
+        circle_marker_4ca7b0cbcb81ec297c4eb1281ab11381.bindPopup(popup_d469bd178af957242a168b31cdf61317)
+        ;
+
+        
+    
+    
+            var circle_marker_f7f04d89183e8c3ecf1d2bd280be1e78 = L.circleMarker(
+                [25.06633708961218, 121.60093143697672],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_dab3f5560f7bef9a10cc619969d4b9e5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f598ae61c937e675c81825a7df83098b = $(`<div id="html_f598ae61c937e675c81825a7df83098b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_4647<br>             <b>Speed:</b> 79.7 km/h<br>             <b>Stuck:</b> 5 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_dab3f5560f7bef9a10cc619969d4b9e5.setContent(html_f598ae61c937e675c81825a7df83098b);
+            
+        
+
+        circle_marker_f7f04d89183e8c3ecf1d2bd280be1e78.bindPopup(popup_dab3f5560f7bef9a10cc619969d4b9e5)
+        ;
+
+        
+    
+    
+            var circle_marker_6a152b92d1d3bba0046fd19f46ccdc20 = L.circleMarker(
+                [25.035320466083352, 121.52056599903038],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_81d74e95e61de8f5a8706069045d363f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2c854d655941a69e8a96c2594e12179c = $(`<div id="html_2c854d655941a69e8a96c2594e12179c" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_8090<br>             <b>Speed:</b> 41.7 km/h<br>             <b>Stuck:</b> 3 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_81d74e95e61de8f5a8706069045d363f.setContent(html_2c854d655941a69e8a96c2594e12179c);
+            
+        
+
+        circle_marker_6a152b92d1d3bba0046fd19f46ccdc20.bindPopup(popup_81d74e95e61de8f5a8706069045d363f)
+        ;
+
+        
+    
+    
+            var circle_marker_f0c5104b962d5e33ac8597242c25c7ea = L.circleMarker(
+                [25.05869789108051, 121.55189134176331],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_cb8de477d5782819345428b48e4b76ea = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fa5a93117dc64b59e3577c3cc56b6b18 = $(`<div id="html_fa5a93117dc64b59e3577c3cc56b6b18" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_1608<br>             <b>Speed:</b> 78.5 km/h<br>             <b>Stuck:</b> 7 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_cb8de477d5782819345428b48e4b76ea.setContent(html_fa5a93117dc64b59e3577c3cc56b6b18);
+            
+        
+
+        circle_marker_f0c5104b962d5e33ac8597242c25c7ea.bindPopup(popup_cb8de477d5782819345428b48e4b76ea)
+        ;
+
+        
+    
+    
+            var circle_marker_8449ac9eda13e71e0160c724e103431d = L.circleMarker(
+                [25.06791377720062, 121.60553418956206],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_71124203a5cbc1bdb8ce1e9de648528c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_66f272e27c010689913bb63cedc27dd9 = $(`<div id="html_66f272e27c010689913bb63cedc27dd9" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_7137<br>             <b>Speed:</b> 45.2 km/h<br>             <b>Stuck:</b> 8 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_71124203a5cbc1bdb8ce1e9de648528c.setContent(html_66f272e27c010689913bb63cedc27dd9);
+            
+        
+
+        circle_marker_8449ac9eda13e71e0160c724e103431d.bindPopup(popup_71124203a5cbc1bdb8ce1e9de648528c)
+        ;
+
+        
+    
+    
+            var circle_marker_00eadf9f52a9082cb359ca7bc017a156 = L.circleMarker(
+                [24.991255701713282, 121.60141047254834],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_860d3435af7fa314fb66ccf2d96e5830 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_96bf38826ea750aa3f98dc44d51355c9 = $(`<div id="html_96bf38826ea750aa3f98dc44d51355c9" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_4339<br>             <b>Speed:</b> 20.3 km/h<br>             <b>Stuck:</b> 4 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_860d3435af7fa314fb66ccf2d96e5830.setContent(html_96bf38826ea750aa3f98dc44d51355c9);
+            
+        
+
+        circle_marker_00eadf9f52a9082cb359ca7bc017a156.bindPopup(popup_860d3435af7fa314fb66ccf2d96e5830)
+        ;
+
+        
+    
+    
+            var circle_marker_3e15087df57ee23545d4fe44225f3170 = L.circleMarker(
+                [25.06437132716291, 121.59064656916169],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_9583710e34655a031ba020c337228ebb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4c77e7ca46f657ca8050edcd937c9e42 = $(`<div id="html_4c77e7ca46f657ca8050edcd937c9e42" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_4653<br>             <b>Speed:</b> 50.2 km/h<br>             <b>Stuck:</b> 2 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_9583710e34655a031ba020c337228ebb.setContent(html_4c77e7ca46f657ca8050edcd937c9e42);
+            
+        
+
+        circle_marker_3e15087df57ee23545d4fe44225f3170.bindPopup(popup_9583710e34655a031ba020c337228ebb)
+        ;
+
+        
+    
+    
+            var circle_marker_26edfa016db427396da63602779ece44 = L.circleMarker(
+                [25.029018937096755, 121.60742318020283],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_912180671dad2abae6d9969311660a00 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_60f6d0aecdcc96922c5d8bae4f507de6 = $(`<div id="html_60f6d0aecdcc96922c5d8bae4f507de6" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_6157<br>             <b>Speed:</b> 12.7 km/h<br>             <b>Stuck:</b> 5 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_912180671dad2abae6d9969311660a00.setContent(html_60f6d0aecdcc96922c5d8bae4f507de6);
+            
+        
+
+        circle_marker_26edfa016db427396da63602779ece44.bindPopup(popup_912180671dad2abae6d9969311660a00)
+        ;
+
+        
+    
+    
+            var circle_marker_3cf6f3afa16bc681a47dda79d3191a9d = L.circleMarker(
+                [25.053519391479714, 121.53027501715525],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_e849c15d685c70e2e9a8a41908a3a667 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_120a96d7583360eccc2dbb2578562eb0 = $(`<div id="html_120a96d7583360eccc2dbb2578562eb0" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_2123<br>             <b>Speed:</b> 31.5 km/h<br>             <b>Stuck:</b> 8 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_e849c15d685c70e2e9a8a41908a3a667.setContent(html_120a96d7583360eccc2dbb2578562eb0);
+            
+        
+
+        circle_marker_3cf6f3afa16bc681a47dda79d3191a9d.bindPopup(popup_e849c15d685c70e2e9a8a41908a3a667)
+        ;
+
+        
+    
+    
+            var circle_marker_55cc2c96c25b261a87504bb099187a55 = L.circleMarker(
+                [24.99422000768303, 121.5583650781249],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_708ddfe487837f2578f19e0564519d65 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_11fee5c58ad8f1cccc48f985a9c9a931 = $(`<div id="html_11fee5c58ad8f1cccc48f985a9c9a931" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_5186<br>             <b>Speed:</b> 72.8 km/h<br>             <b>Stuck:</b> 7 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_708ddfe487837f2578f19e0564519d65.setContent(html_11fee5c58ad8f1cccc48f985a9c9a931);
+            
+        
+
+        circle_marker_55cc2c96c25b261a87504bb099187a55.bindPopup(popup_708ddfe487837f2578f19e0564519d65)
+        ;
+
+        
+    
+    
+            var circle_marker_3ab099b4fbc48cef6f9311f514fe62c9 = L.circleMarker(
+                [25.046931072973493, 121.53662001691922],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_b1780ab0b47440f5b741fafc5cb146e4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2fc9795e379b5835dbdc7ff37b6ddb15 = $(`<div id="html_2fc9795e379b5835dbdc7ff37b6ddb15" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_1129<br>             <b>Speed:</b> 48.2 km/h<br>             <b>Stuck:</b> 6 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_b1780ab0b47440f5b741fafc5cb146e4.setContent(html_2fc9795e379b5835dbdc7ff37b6ddb15);
+            
+        
+
+        circle_marker_3ab099b4fbc48cef6f9311f514fe62c9.bindPopup(popup_b1780ab0b47440f5b741fafc5cb146e4)
+        ;
+
+        
+    
+    
+            var circle_marker_7691e41990473b68ca79fcb64a4679a3 = L.circleMarker(
+                [25.07853175270551, 121.60492992460867],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_0c1eef9d45faef95daa11afb70ede5a9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_94f3948fd796e21380947ff6cc9d23c0 = $(`<div id="html_94f3948fd796e21380947ff6cc9d23c0" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_2225<br>             <b>Speed:</b> 28.4 km/h<br>             <b>Stuck:</b> 4 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_0c1eef9d45faef95daa11afb70ede5a9.setContent(html_94f3948fd796e21380947ff6cc9d23c0);
+            
+        
+
+        circle_marker_7691e41990473b68ca79fcb64a4679a3.bindPopup(popup_0c1eef9d45faef95daa11afb70ede5a9)
+        ;
+
+        
+    
+    
+            var circle_marker_6ee5fab280cc1af76e50a10d2d6ec692 = L.circleMarker(
+                [24.986922998068373, 121.59203000307475],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_61c9034e98eed4626c0d95bafdf9d689 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_882a8c24c7d9cef325a3e6202c7f71ba = $(`<div id="html_882a8c24c7d9cef325a3e6202c7f71ba" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_8547<br>             <b>Speed:</b> 14.1 km/h<br>             <b>Stuck:</b> 7 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_61c9034e98eed4626c0d95bafdf9d689.setContent(html_882a8c24c7d9cef325a3e6202c7f71ba);
+            
+        
+
+        circle_marker_6ee5fab280cc1af76e50a10d2d6ec692.bindPopup(popup_61c9034e98eed4626c0d95bafdf9d689)
+        ;
+
+        
+    
+    
+            var circle_marker_e3be74229e3b238db8878a8136231641 = L.circleMarker(
+                [25.022850697092014, 121.58318306393811],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_3fb3f1ef9ba438b9ac06c0297e945ad7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_78465e3857058ae22735f87fa1889da9 = $(`<div id="html_78465e3857058ae22735f87fa1889da9" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_7345<br>             <b>Speed:</b> 16.6 km/h<br>             <b>Stuck:</b> 4 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_3fb3f1ef9ba438b9ac06c0297e945ad7.setContent(html_78465e3857058ae22735f87fa1889da9);
+            
+        
+
+        circle_marker_e3be74229e3b238db8878a8136231641.bindPopup(popup_3fb3f1ef9ba438b9ac06c0297e945ad7)
+        ;
+
+        
+    
+    
+            var circle_marker_e119280679e99db52c1d0d58bb9675fe = L.circleMarker(
+                [25.00584426869291, 121.57087443356946],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_718c513f22fe7a55a24928a2d86c2459 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6bea3882b78c5aa9823d29bc14bf0fdc = $(`<div id="html_6bea3882b78c5aa9823d29bc14bf0fdc" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_9277<br>             <b>Speed:</b> 76.5 km/h<br>             <b>Stuck:</b> 4 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_718c513f22fe7a55a24928a2d86c2459.setContent(html_6bea3882b78c5aa9823d29bc14bf0fdc);
+            
+        
+
+        circle_marker_e119280679e99db52c1d0d58bb9675fe.bindPopup(popup_718c513f22fe7a55a24928a2d86c2459)
+        ;
+
+        
+    
+    
+            var circle_marker_1a161d9db4e9536c699fd250b71ad260 = L.circleMarker(
+                [25.071087691377194, 121.58155863623657],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_3dc09824a9e2c4b0d150da136f046fc9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0fc80d909c4671825cb39946a688ad70 = $(`<div id="html_0fc80d909c4671825cb39946a688ad70" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_9283<br>             <b>Speed:</b> 47.4 km/h<br>             <b>Stuck:</b> 1 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_3dc09824a9e2c4b0d150da136f046fc9.setContent(html_0fc80d909c4671825cb39946a688ad70);
+            
+        
+
+        circle_marker_1a161d9db4e9536c699fd250b71ad260.bindPopup(popup_3dc09824a9e2c4b0d150da136f046fc9)
+        ;
+
+        
+    
+    
+            var circle_marker_37f59cf06c080a77c0c53c3014cfde0a = L.circleMarker(
+                [25.067439290691894, 121.55235740173667],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_fe7a4349e966470f968687e8bea74c6d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c56b96584c29f6732c24d47d5c513f53 = $(`<div id="html_c56b96584c29f6732c24d47d5c513f53" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_1373<br>             <b>Speed:</b> 55.6 km/h<br>             <b>Stuck:</b> 7 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_fe7a4349e966470f968687e8bea74c6d.setContent(html_c56b96584c29f6732c24d47d5c513f53);
+            
+        
+
+        circle_marker_37f59cf06c080a77c0c53c3014cfde0a.bindPopup(popup_fe7a4349e966470f968687e8bea74c6d)
+        ;
+
+        
+    
+    
+            var circle_marker_3a83c8e75b53e05d03d7614f916135c1 = L.circleMarker(
+                [25.045079857969878, 121.57913430177236],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_fd7c9d2f0184f190e45267a4b53c86ba = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_844e26c22f0e86e99ff931a36ec53a5b = $(`<div id="html_844e26c22f0e86e99ff931a36ec53a5b" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_4232<br>             <b>Speed:</b> 67.0 km/h<br>             <b>Stuck:</b> 6 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_fd7c9d2f0184f190e45267a4b53c86ba.setContent(html_844e26c22f0e86e99ff931a36ec53a5b);
+            
+        
+
+        circle_marker_3a83c8e75b53e05d03d7614f916135c1.bindPopup(popup_fd7c9d2f0184f190e45267a4b53c86ba)
+        ;
+
+        
+    
+    
+            var circle_marker_386f491a72fcfa10d57548b75eb41d07 = L.circleMarker(
+                [25.033468750605696, 121.61086771776512],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_3420a695c996511a464a075ed8b18f93 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0e124292c39f7394ea9cb640f000b7da = $(`<div id="html_0e124292c39f7394ea9cb640f000b7da" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_2735<br>             <b>Speed:</b> 26.5 km/h<br>             <b>Stuck:</b> 6 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_3420a695c996511a464a075ed8b18f93.setContent(html_0e124292c39f7394ea9cb640f000b7da);
+            
+        
+
+        circle_marker_386f491a72fcfa10d57548b75eb41d07.bindPopup(popup_3420a695c996511a464a075ed8b18f93)
+        ;
+
+        
+    
+    
+            var circle_marker_3106c08015147273d1b808b1064d3ff0 = L.circleMarker(
+                [24.99396723533725, 121.58109870918405],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_9af225c18187d2a94c46eb47df1d5d20 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d8c0b6031c362ac9d723a4833e15a26a = $(`<div id="html_d8c0b6031c362ac9d723a4833e15a26a" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_1640<br>             <b>Speed:</b> 40.3 km/h<br>             <b>Stuck:</b> 6 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_9af225c18187d2a94c46eb47df1d5d20.setContent(html_d8c0b6031c362ac9d723a4833e15a26a);
+            
+        
+
+        circle_marker_3106c08015147273d1b808b1064d3ff0.bindPopup(popup_9af225c18187d2a94c46eb47df1d5d20)
+        ;
+
+        
+    
+    
+            var circle_marker_f82734f60bf1c7f62361bd0cf132868a = L.circleMarker(
+                [25.04817663087248, 121.58964037674303],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_fb369901466ddf5ad2e77f6be0f418d6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_96bd8e714eab5608dd2db2624b68e566 = $(`<div id="html_96bd8e714eab5608dd2db2624b68e566" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_6761<br>             <b>Speed:</b> 11.7 km/h<br>             <b>Stuck:</b> 1 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_fb369901466ddf5ad2e77f6be0f418d6.setContent(html_96bd8e714eab5608dd2db2624b68e566);
+            
+        
+
+        circle_marker_f82734f60bf1c7f62361bd0cf132868a.bindPopup(popup_fb369901466ddf5ad2e77f6be0f418d6)
+        ;
+
+        
+    
+    
+            var circle_marker_5b704f4e4576783c50285a16a2e51d54 = L.circleMarker(
+                [25.0524533448479, 121.52987897574828],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_7fa11749e117652b701a9d52528561d9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5159c2108e901b01ecf982e97ba04de4 = $(`<div id="html_5159c2108e901b01ecf982e97ba04de4" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_2731<br>             <b>Speed:</b> 65.2 km/h<br>             <b>Stuck:</b> 7 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_7fa11749e117652b701a9d52528561d9.setContent(html_5159c2108e901b01ecf982e97ba04de4);
+            
+        
+
+        circle_marker_5b704f4e4576783c50285a16a2e51d54.bindPopup(popup_7fa11749e117652b701a9d52528561d9)
+        ;
+
+        
+    
+    
+            var circle_marker_6872bff79815459c0611461e73d0348f = L.circleMarker(
+                [25.07237703901664, 121.60223472330478],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_e30c27ce2b127156b374e5f87f4a0a3d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_58aca96165c670091cf6d13e656592e9 = $(`<div id="html_58aca96165c670091cf6d13e656592e9" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_6964<br>             <b>Speed:</b> 16.6 km/h<br>             <b>Stuck:</b> 8 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_e30c27ce2b127156b374e5f87f4a0a3d.setContent(html_58aca96165c670091cf6d13e656592e9);
+            
+        
+
+        circle_marker_6872bff79815459c0611461e73d0348f.bindPopup(popup_e30c27ce2b127156b374e5f87f4a0a3d)
+        ;
+
+        
+    
+    
+            var circle_marker_debc8f361322b15dbb38f72f48ad03ba = L.circleMarker(
+                [25.040159566549207, 121.53264614965218],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_974e7f82c51e569dc96887fb5c86b6a9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2801a3cbcf72cc17fd385883de37d4ae = $(`<div id="html_2801a3cbcf72cc17fd385883de37d4ae" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_5201<br>             <b>Speed:</b> 20.5 km/h<br>             <b>Stuck:</b> 4 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_974e7f82c51e569dc96887fb5c86b6a9.setContent(html_2801a3cbcf72cc17fd385883de37d4ae);
+            
+        
+
+        circle_marker_debc8f361322b15dbb38f72f48ad03ba.bindPopup(popup_974e7f82c51e569dc96887fb5c86b6a9)
+        ;
+
+        
+    
+    
+            var circle_marker_491b31938032391d6aeaaa07ab8559bd = L.circleMarker(
+                [25.073421499987568, 121.5359747895628],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_b9bef5c00727aa970f7cfb405d65f8d7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4265d6d5b603c4155199dca12da08234 = $(`<div id="html_4265d6d5b603c4155199dca12da08234" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_4413<br>             <b>Speed:</b> 62.6 km/h<br>             <b>Stuck:</b> 4 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_b9bef5c00727aa970f7cfb405d65f8d7.setContent(html_4265d6d5b603c4155199dca12da08234);
+            
+        
+
+        circle_marker_491b31938032391d6aeaaa07ab8559bd.bindPopup(popup_b9bef5c00727aa970f7cfb405d65f8d7)
+        ;
+
+        
+    
+    
+            var circle_marker_39a97bf60e9ef0f5d5f16cabb93a75b5 = L.circleMarker(
+                [25.025202108818515, 121.54179768396277],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_eb6dabac32843b77e31c8914d4622567 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c79d0f5e441a6663a90d623ea2ae2883 = $(`<div id="html_c79d0f5e441a6663a90d623ea2ae2883" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_5592<br>             <b>Speed:</b> 72.8 km/h<br>             <b>Stuck:</b> 4 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_eb6dabac32843b77e31c8914d4622567.setContent(html_c79d0f5e441a6663a90d623ea2ae2883);
+            
+        
+
+        circle_marker_39a97bf60e9ef0f5d5f16cabb93a75b5.bindPopup(popup_eb6dabac32843b77e31c8914d4622567)
+        ;
+
+        
+    
+    
+            var circle_marker_d5e64c42e70cd54d67754d6aa9993985 = L.circleMarker(
+                [25.028586015233568, 121.51562833816756],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_6c4a83abfcb858c7f0ec74e69d99539d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4bac5dfa54ab184d3d213594f425caf0 = $(`<div id="html_4bac5dfa54ab184d3d213594f425caf0" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_7160<br>             <b>Speed:</b> 44.5 km/h<br>             <b>Stuck:</b> 2 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_6c4a83abfcb858c7f0ec74e69d99539d.setContent(html_4bac5dfa54ab184d3d213594f425caf0);
+            
+        
+
+        circle_marker_d5e64c42e70cd54d67754d6aa9993985.bindPopup(popup_6c4a83abfcb858c7f0ec74e69d99539d)
+        ;
+
+        
+    
+    
+            var circle_marker_b1cdf5ba728a56410814cbe2c266adc6 = L.circleMarker(
+                [25.030057962124353, 121.53843005271854],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_9c52cb0039bdbafe6de99c0ce8d87f38 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bc34cd3b8d5d2f85350b0f9fc1d16b53 = $(`<div id="html_bc34cd3b8d5d2f85350b0f9fc1d16b53" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_2057<br>             <b>Speed:</b> 67.0 km/h<br>             <b>Stuck:</b> 8 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_9c52cb0039bdbafe6de99c0ce8d87f38.setContent(html_bc34cd3b8d5d2f85350b0f9fc1d16b53);
+            
+        
+
+        circle_marker_b1cdf5ba728a56410814cbe2c266adc6.bindPopup(popup_9c52cb0039bdbafe6de99c0ce8d87f38)
+        ;
+
+        
+    
+    
+            var circle_marker_fd1eb6b330103d743827f4b4f43b2c4e = L.circleMarker(
+                [25.08096309137087, 121.56445865996834],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_3db3ffa4489cf4080cd383bc29481163 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1c45c3efc918a95bfac2ddc405a1fa0d = $(`<div id="html_1c45c3efc918a95bfac2ddc405a1fa0d" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_6384<br>             <b>Speed:</b> 46.1 km/h<br>             <b>Stuck:</b> 1 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_3db3ffa4489cf4080cd383bc29481163.setContent(html_1c45c3efc918a95bfac2ddc405a1fa0d);
+            
+        
+
+        circle_marker_fd1eb6b330103d743827f4b4f43b2c4e.bindPopup(popup_3db3ffa4489cf4080cd383bc29481163)
+        ;
+
+        
+    
+    
+            var circle_marker_85ffb5ba1315e2ede11e32fd89c93f40 = L.circleMarker(
+                [25.009794286398236, 121.55114618784819],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_771be9612b3198514c78ffb53e861740 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f33223291804f6d21e450daf0de2c071 = $(`<div id="html_f33223291804f6d21e450daf0de2c071" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_5163<br>             <b>Speed:</b> 16.9 km/h<br>             <b>Stuck:</b> 8 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_771be9612b3198514c78ffb53e861740.setContent(html_f33223291804f6d21e450daf0de2c071);
+            
+        
+
+        circle_marker_85ffb5ba1315e2ede11e32fd89c93f40.bindPopup(popup_771be9612b3198514c78ffb53e861740)
+        ;
+
+        
+    
+    
+            var circle_marker_c5f97f0e5c97f4e960dabaa3daa2b5ec = L.circleMarker(
+                [25.077973190100025, 121.5455095587091],
+                {"bubblingMouseEvents": true, "color": "#ff4d4d", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#ff4d4d", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_be3316072a8d6d8020c5e6e740c6bc2c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7bed6209511cbabae29669652eefd31e = $(`<div id="html_7bed6209511cbabae29669652eefd31e" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #ff4d4d;">Risk: Congested (紅色警戒)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_1254<br>             <b>Speed:</b> 21.5 km/h<br>             <b>Stuck:</b> 0 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_be3316072a8d6d8020c5e6e740c6bc2c.setContent(html_7bed6209511cbabae29669652eefd31e);
+            
+        
+
+        circle_marker_c5f97f0e5c97f4e960dabaa3daa2b5ec.bindPopup(popup_be3316072a8d6d8020c5e6e740c6bc2c)
+        ;
+
+        
+    
+    
+            var circle_marker_f09a4dfedf079121d295aef498be39a4 = L.circleMarker(
+                [25.06911745492042, 121.56562262127036],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_b07c715bf5a43febd0d57f505129d883 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_9df6ecd30e18bfa3e5d0f18a6c368336 = $(`<div id="html_9df6ecd30e18bfa3e5d0f18a6c368336" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_7956<br>             <b>Speed:</b> 44.5 km/h<br>             <b>Stuck:</b> 5 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_b07c715bf5a43febd0d57f505129d883.setContent(html_9df6ecd30e18bfa3e5d0f18a6c368336);
+            
+        
+
+        circle_marker_f09a4dfedf079121d295aef498be39a4.bindPopup(popup_b07c715bf5a43febd0d57f505129d883)
+        ;
+
+        
+    
+    
+            var circle_marker_b2e84be3b45331fe32560567a485abe9 = L.circleMarker(
+                [25.033307902314725, 121.5231486457899],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_fbb292e0715c95b1ff371584992a7fd4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ccdb28c454f4842ac1411ea15cf84932 = $(`<div id="html_ccdb28c454f4842ac1411ea15cf84932" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #2ecc71;">Good: Efficient (綠色暢通)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_4666<br>             <b>Speed:</b> 64.5 km/h<br>             <b>Stuck:</b> 7 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_fbb292e0715c95b1ff371584992a7fd4.setContent(html_ccdb28c454f4842ac1411ea15cf84932);
+            
+        
+
+        circle_marker_b2e84be3b45331fe32560567a485abe9.bindPopup(popup_fbb292e0715c95b1ff371584992a7fd4)
+        ;
+
+        
+    
+    
+            var circle_marker_9ffe8f1f423feaf66fb91246a8267bf2 = L.circleMarker(
+                [25.001141162315903, 121.54381578218685],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_0348d1aae7de3979fa439f1194ad58eb);
+        
+    
+        var popup_5d3c93181432dd0963467e6cef29b8e9 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4ec9522c2d2520a100baaf72f9f358cd = $(`<div id="html_4ec9522c2d2520a100baaf72f9f358cd" style="width: 100.0%; height: 100.0%;">         <div style="font-family: Arial; width: 220px;">             <h4 style="margin: 0; color: #f1c40f;">Normal: Average (黃色觀察)</h4>             <hr style="margin: 5px 0;">             <b>Driver:</b> D_8689<br>             <b>Speed:</b> 37.7 km/h<br>             <b>Stuck:</b> 3 times<br>             <hr style="margin: 5px 0;">             <b style="color: #666;">🤖 AI Advice:</b><br>             <i style="font-size: 12px;">Analysis pending...</i>         </div>         </div>`)[0];
+                popup_5d3c93181432dd0963467e6cef29b8e9.setContent(html_4ec9522c2d2520a100baaf72f9f358cd);
+            
+        
+
+        circle_marker_9ffe8f1f423feaf66fb91246a8267bf2.bindPopup(popup_5d3c93181432dd0963467e6cef29b8e9)
+        ;
+
+        
+    
+</script>
+</html>
