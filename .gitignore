@@ -20,3 +20,9 @@ metastore_db/
 .venv/
 
 .env
+
+# --- 文件 ----
+
+doc/
+logs/
+outputs/

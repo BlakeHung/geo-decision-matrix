@@ -63,12 +63,20 @@ def main():
     print("\n========= 城市運營決策矩陣 (Decision Matrix) =========")
     decision_matrix.orderBy(F.desc("final_score")).show(truncate=False)
 
-    # --- 匯出結果為 JSON ---
-    print(">>> [Export] 正在匯出結果為 JSON...")
-    output_file = "data/decision_result.json"
+    # --- 匯出結果為 Parquet (GPU 最佳化格式) + JSON (API 相容) ---
+    print(">>> [Export] 正在匯出結果...")
+
+    # 1. Parquet 格式（供 GPU 讀取，零解析成本）
+    parquet_output = "data/decision_result.parquet"
+    decision_matrix.orderBy(F.desc("final_score")) \
+                   .write.parquet(parquet_output, mode="overwrite", compression="snappy")
+    print(f"✅ [Parquet] GPU-optimized format: {parquet_output}")
+
+    # 2. JSON 格式（供 API 伺服器讀取，向後兼容）
+    json_output = "data/decision_result.json"
     pandas_df = decision_matrix.orderBy(F.desc("final_score")).toPandas()
-    pandas_df.to_json(output_file, orient="records", force_ascii=False, indent=4)
-    print(f">>> 匯出完成！API 伺服器將讀取此檔案：{output_file}")
+    pandas_df.to_json(json_output, orient="records", force_ascii=False, indent=4)
+    print(f"✅ [JSON] API-compatible format: {json_output}")
 
     # ==========================================
     # 這裡就是關鍵！讓程式暫停 300 秒 (5分鐘)

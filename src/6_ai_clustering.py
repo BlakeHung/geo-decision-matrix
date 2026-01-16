@@ -29,7 +29,8 @@ except Exception as e:
     GPU_AVAILABLE = False
     print(f"⚠️ GPU 不可用，將使用 CPU 模式")
 
-INPUT_FILE = 'data/decision_result.json'
+INPUT_PARQUET = 'data/decision_result.parquet'
+INPUT_JSON = 'data/decision_result.json'
 OUTPUT_FILE = 'data/clustered_result.json'
 
 def generate_mock_data():
@@ -95,14 +96,37 @@ def perform_clustering(df):
     return df
 
 def main():
-    # 讀取或生成資料
-    if os.path.exists(INPUT_FILE):
+    # 讀取資料（優先 Parquet，降級 JSON，最後生成模擬數據）
+    df = None
+
+    # 嘗試讀取 Parquet（GPU 最佳化格式）
+    if os.path.exists(INPUT_PARQUET):
         try:
-            with open(INPUT_FILE, 'r') as f:
+            print(f"📦 [Loading] 讀取 Parquet 格式: {INPUT_PARQUET}")
+            if GPU_AVAILABLE:
+                # GPU 直接讀取 Parquet（零解析成本）
+                import cudf
+                gdf = cudf.read_parquet(INPUT_PARQUET)
+                df = gdf.to_pandas()  # 暫時轉成 pandas（後續改進可全程用 cudf）
+                print(f"⚡ [GPU] 使用 cuDF 讀取 (零拷貝)")
+            else:
+                # CPU 降級模式
+                df = pd.read_parquet(INPUT_PARQUET)
+                print(f"🐢 [CPU] 使用 Pandas 讀取")
+        except Exception as e:
+            print(f"⚠️ Parquet 讀取失敗 ({e})，嘗試 JSON...")
+
+    # 降級：嘗試讀取 JSON
+    if df is None and os.path.exists(INPUT_JSON):
+        try:
+            print(f"📄 [Fallback] 讀取 JSON 格式: {INPUT_JSON}")
+            with open(INPUT_JSON, 'r') as f:
                 df = pd.DataFrame(json.load(f))
-        except:
-            df = generate_mock_data()
-    else:
+        except Exception as e:
+            print(f"⚠️ JSON 讀取失敗 ({e})，生成模擬數據...")
+
+    # 最後降級：生成模擬數據
+    if df is None:
         df = generate_mock_data()
 
     # 執行分群

@@ -5,7 +5,14 @@ services:
     volumes:
       - .:/app
     ports:
-      - "8000:8000"
+      - "9090:8000"  # 使用 9090 端口，避免衝突
     extra_hosts:
       - "host.docker.internal:host-gateway"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
     command: tail -f /dev/null

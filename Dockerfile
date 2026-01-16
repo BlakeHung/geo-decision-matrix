@@ -12,17 +12,24 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # 2. 安裝 Python 核心架構 (一次裝好，永不遺失)
+# - pyspark: Spark ETL (CPU 清洗)
+# - pandas/numpy: 資料處理
+# - torch/transformers: AI 核心
 # - celery[redis]: 非同步任務
 # - watchdog: 監控檔案變動
-# - torch/transformers: AI 核心
 RUN pip install --no-cache-dir \
+    pyspark pandas numpy pyarrow \
     torch transformers accelerate \
     fastapi uvicorn \
-    streamlit plotly \
-    celery[redis] redis flower watchdog
+    streamlit plotly folium \
+    celery[redis] redis flower watchdog \
+    langchain langchain-community langchain-core ollama
 
 # 3. 設定工作目錄
-WORKDIR /workspace
+WORKDIR /app
 
-# 4. 預設啟動指令
+# 4. 複製專案檔案
+COPY . /app
+
+# 5. 預設啟動指令
 CMD ["bash"]
