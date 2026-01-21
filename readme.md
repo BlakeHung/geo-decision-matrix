@@ -8,11 +8,11 @@
 
 地圖 API 供應商遷移評估系統，展示如何用混合架構處理 50 萬筆 GPS 數據。
 
-| 方案 | 時間 | 狀態 |
-|------|------|------|
-| Node.js 單機 | 數小時 / OOM | ❌ |
-| Dask Multi-GPU（雙卡） | 420s | ❌ 通訊 overhead |
-| **Spark + RAPIDS（單卡）** | **150s** | ✅ |
+| 方案                     | 時間        | 狀態            |
+| ---------------------- | --------- | ------------- |
+| Node.js 單機             | 數小時 / OOM | ❌             |
+| Dask Multi-GPU（雙卡）     | 420s      | ❌ 通訊 overhead |
+| **Spark + RAPIDS（單卡）** | **150s**  | ✅             |
 
 ---
 
@@ -90,11 +90,11 @@ geo-decision-matrix/
 
 ### 1. Parquet vs CSV
 
-| 特性 | CSV | Parquet |
-|------|-----|---------|
-| 記憶體存取 | 跳躍（32次） | 連續（1次） |
-| GPU 加速 | ❌ | ✅ 32x |
-| 格式 | 字串解析 | 二進制直讀 |
+| 特性     | CSV     | Parquet |
+| ------ | ------- | ------- |
+| 記憶體存取  | 跳躍（32次） | 連續（1次）  |
+| GPU 加速 | ❌       | ✅ 32x   |
+| 格式     | 字串解析    | 二進制直讀   |
 
 ### 2. GPU 熱啟動
 
@@ -156,8 +156,8 @@ export NCCL_P2P_DISABLE=1
 
 ## 相關文章
 
-- **3.1 硬體限制篇**：雙 GPU 反而慢 2.8 倍
-- **3.2 混合架構篇**：Spark + Parquet + RAPIDS
+- [**3.1 硬體限制篇**：雙 GPU 反而慢 2.8 倍](https://wchung.tw/blog/local-ai-server-dual-psu-z370-nccl-error/)
+- [**3.2 混合架構篇**：Spark + Parquet + RAPIDS](https://wchung.tw/blog/hybrid-architecture-spark-rapids-parquet-gpu/)
 - **3.3 算力解放篇**：微服務 + 0.51s 推論
 
 ---
@@ -171,4 +171,4 @@ MIT
 **關鍵字**：Spark, RAPIDS, Parquet, GPU, Data Engineering, ETL, cuML, FastAPI, Celery
 
 **作者**：Blake
-**更新**：2025-01
+**更新**：2026-01-21
